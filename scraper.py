@@ -41,32 +41,7 @@ def wordCounter(article):
     return word_count
 
 
- # Function to get the word count of an article
-
-def wordCounter(article):
-    
-    # Get correct html section of article
-    page = requests.get(article)  
-    html = BeautifulSoup(page.content, "html.parser") 
-    article_content = html.find_all(class_="article-content-body")
-    
-    # Convert html into list
-    content = []
-    for words in article_content:
-        words = words.text
-        content.append(words)
-    
-    # Convert list into string
-    content_string = ""
-    for element in content:
-        content_string += element
-    
-    word_count = len(content_string.split())
-    
-    return word_count
- 
-
-# Function to get the word count of an article with differnt format
+# Function to get the word count of an alternatively formatted article
 
 def wordCounterAlternative(article):
     

@@ -9,6 +9,7 @@ article_data = pd.read_csv(r'C:\Users\jonah\Downloads\Article_Data.csv')
 urls = article_data[["URL"]]
 urls = urls.values.tolist()
 
+
 # Making list of all
 df = pd.read_csv(r'C:\Users\jonah\Downloads\tickers.csv')
 all_tickers = df[["Tickers"]]
@@ -38,6 +39,8 @@ def wordCounter(article):
     word_count = len(content_string.split())
     
     return word_count
+
+
  # Function to get the word count of an article
 
 def wordCounter(article):

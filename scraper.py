@@ -10,7 +10,7 @@ urls = article_data[["URL"]]
 urls = urls.values.tolist()
 
 
-# Making list of all
+# Making list of all tickers on Benzinga
 df = pd.read_csv(r'C:\Users\jonah\Downloads\tickers.csv')
 all_tickers = df[["Tickers"]]
 all_tickers = all_tickers.values.tolist()
